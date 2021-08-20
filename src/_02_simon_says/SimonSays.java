@@ -99,7 +99,7 @@ public class SimonSays extends KeyAdapter {
 		// 27. Exit the program
 
 		// 23. Dispose of the frame
-//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
+//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
 
 		// 24. Call the showImage method to show a new image
 		showImage();
