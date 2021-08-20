@@ -32,41 +32,49 @@ public class SimonSays extends KeyAdapter {
 	// 1. Declare a JFrame variable
 
 	public void run() {
-		JFrame frame =new JFrame();
+	JFrame frame = new JFrame();
 		// 2. Add the four images that match keyboard keys like this:
 		// images.put(KeyEvent.VK_UP, "up.jpg");
-		images.put(KeyEvent.VK_UP, "up.jpg"); 
+		images.put(KeyEvent.VK_UP, "up.jpg");
 		images.put(KeyEvent.VK_DOWN, "down.jpg");
-		images.put(KeyEvent.VK_LEFT, "left.jpg"); 
+		images.put(KeyEvent.VK_LEFT, "left.jpg");
 		images.put(KeyEvent.VK_RIGHT, "right.jpg");
 		// 3. Use a JOptionPane to tell the user the rules: "Press the matching
 		// key when
-		JOptionPane.showMessageDialog(null, "The rules are: press the matching key when 'Simon says' otherwise press another key");
+		JOptionPane.showMessageDialog(null,
+				"The rules are: press the matching key when 'Simon says' otherwise press another key");
 
-		JOptionPane.showMessageDialog(null,"good luck");
-		
+		JOptionPane.showMessageDialog(null, "good luck");
+
 		// 'Simon says' otherwise press a different key"
 
 		// 4. Call the showImage method to show an image
-
-	
+		showImage();
 
 	}
-	
-
-
 
 	public void keyPressed(KeyEvent e) {
 		// 15. Make a points variable to track the score.
-int score = 0;
+		int score = 0;
+		int tries = 0;
 		// 16. If the keyCode matches the imageIndex and "Simon says"
-
+		if (e.getKeyCode() == imageIndex && simonSays) {
+			score = score + 1;
+			speak("you are correct");
+			showImage();
+				}
 		// 17. Increase the value of score
 
 		// 18. Use the speak method to tell the user they were correct
 
 		// 19. If the keyCode doesn't match the imageIndex and "Simon didn't
 		// say..."
+		if (e.getKeyCode() != imageIndex && !simonSays) {
+			score = score + 1;
+			speak("you are correct");
+			showImage();
+			
+		}
 
 		// 20. Increase the value of score
 
@@ -75,41 +83,57 @@ int score = 0;
 		// 22. Increment tries by 1
 
 		// 25. If tries is greater than 9 (or however many you want)...
-
+		if (e.getKeyCode() != imageIndex && simonSays) {
+			tries = tries + 1;
+			speak("nope");
+		}
+		if (e.getKeyCode() == imageIndex && simonSays) {
+			tries = tries + 1;
+			speak("nope");
+		}
 		// 26. Tell the user their score
-
+		if (tries == 9) {
+			JOptionPane.showMessageDialog(null, "Score: " + score);
+			System.exit(0);
+		}
 		// 27. Exit the program
 
 		// 23. Dispose of the frame
 //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
+
 		// 24. Call the showImage method to show a new image
+		showImage();
 	}
 
 	private void showImage() {
 		// 5. Initialize your frame to a new JFrame()
-JFrame juicePanda = new JFrame();
+		JFrame juicePanda = new JFrame();
 		// 6. Set the frame to visible
-juicePanda.setVisible(true);
+		juicePanda.setVisible(true);
 		// 7. Uncomment the following line to add a random image to your frame
-		 juicePanda.add(getNextRandomImage());
+		juicePanda.add(getNextRandomImage());
 
 		// 8. Set the name of your frame
-juicePanda.setName(":)");
+		juicePanda.setName(":)");
 		// 9. Pack the frame
-juicePanda.pack();
+		juicePanda.pack();
 		// 10. Set the defaultCloseOperation of your frame to
 		// JFrame.EXIT_ON_CLOSE
-juicePanda.setDefaultCloseOperation(juicePanda.EXIT_ON_CLOSE);
+		juicePanda.setDefaultCloseOperation(juicePanda.EXIT_ON_CLOSE);
 		// 11. Add a key listener to the frame
-juicePanda.addKeyListener(null);
+		juicePanda.addKeyListener(null);
 		// 12. Create a new instance of Random
-Random spider = new Random();
+		Random spider = new Random();
 		// 13. Use the Random and the speak method to either say
 		// "Simon says press this key" or "Press this key"
-spider.nextInt(3);
+		simonSays = spider.nextBoolean();
 
 		// 14. Above, set the value of simonSays to true/false appropriately
-
+		if (simonSays) {
+			speak("Simon says press this key");
+		} else {
+			speak("press this key");
+		}
 	}
 
 	private Component getNextRandomImage() {
@@ -124,7 +148,7 @@ spider.nextInt(3);
 	}
 
 	static void speak(String words) {
-		
+
 		if (System.getProperty("os.name").contains("Windows")) {
 			String cmd = "PowerShell -Command \"Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('"
 					+ words + "');\"";
