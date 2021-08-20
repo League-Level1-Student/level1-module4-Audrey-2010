@@ -103,7 +103,7 @@ public class SimonSays extends KeyAdapter {
 
 		// 24. Call the showImage method to show a new image
 		showImage();
-	}
+	} 
 
 	private void showImage() {
 		// 5. Initialize your frame to a new JFrame()
