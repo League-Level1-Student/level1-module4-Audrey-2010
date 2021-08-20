@@ -94,7 +94,7 @@ public class SimonSays extends KeyAdapter {
 		// 26. Tell the user their score
 		if (tries == 9) {
 			JOptionPane.showMessageDialog(null, "Score: " + score);
-			System.exit(0);
+			System.exit(0); 
 		}
 		// 27. Exit the program
 

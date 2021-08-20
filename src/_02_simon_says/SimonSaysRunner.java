@@ -8,5 +8,5 @@ public class SimonSaysRunner {
 	public static void main(String[] args){
 		new SimonSays().run();
 	}
-
+ 
 }
