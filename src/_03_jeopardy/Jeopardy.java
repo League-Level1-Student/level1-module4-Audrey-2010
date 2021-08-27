@@ -126,8 +126,8 @@ if(buttonPressed.equals(firstButton)) {
 askQuestion("is a bird a dino", "yes", 100);
 }
 			// Call the askQuestion() method
- 
-		// Complete the code in the askQuestion() method. When you play the game, the score should change.
+ //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
+		// Complete the code in the as kQuestion() method. When you play the game, the score should change.
 
 		// If the buttonPressed was the secondButton
 
