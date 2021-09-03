@@ -32,7 +32,7 @@ public class Chuckle implements ActionListener, MouseListener {
 		
 		button.addActionListener(this);
 		bear.addMouseListener(this);
-	}
+	} 
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

@@ -113,7 +113,7 @@ buttonCount = buttonCount+1;
 
 		return button;
 	}
-
+ 
 	public void actionPerformed(ActionEvent e) {
 		
 		// Remove this temporary message after testing:
@@ -126,7 +126,7 @@ if(buttonPressed.equals(firstButton)) {
 askQuestion("is a bird a dino", "yes", 100);
 }
 			// Call the askQuestion() method
- //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
+ //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
 
 		// Complete the code in the as kQuestion() method. When you play the game, the score should change.
 
