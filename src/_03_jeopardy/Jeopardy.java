@@ -127,13 +127,22 @@ askQuestion("is a bird a dino", "yes", 100);
 }
 			// Call the askQuestion() method
  //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
+
 		// Complete the code in the as kQuestion() method. When you play the game, the score should change.
 
 		// If the buttonPressed was the secondButton
-
+if(buttonPressed.equals(secondButton)) {
+	askQuestion("what does dinosaur mean","terrible lizard", 200);
+}
+if(buttonPressed.equals(thirdButton)) {
+	askQuestion("what does velociraptor mean", "sneaky thief", 400);}
+if(buttonPressed.equals(fourthButton)) {
+	askQuestion("How long were dinos on earth", "165 million+",600);
+}
 			// Call the askQuestion() method with a harder question
 
 		// Clear the text on the button that was pressed (set the button text to nothing)
+
 
 	}
 
@@ -142,13 +151,16 @@ askQuestion("is a bird a dino", "yes", 100);
 		// Use the playJeopardyTheme() method to play music while the use thinks of an answer
 		playJeopardyTheme();
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
-		String answer = JOptionPane.showInputDialog(null, "Is a bird a dino");
+		String answer = JOptionPane.showInputDialog(null, question);
 		
 		// Stop the theme music when they have entered their response. 
 		
 		// If the answer is correct
-if(answer.equalsIgnoreCase("yes")) {
+if(answer.equalsIgnoreCase(correctAnswer)) {
+	stopJeopardyTheme();
 	score=score+prizeMoney;
+	
+	
 }
 		
 			// Increase the score by the prizeMoney
@@ -157,8 +169,9 @@ if(answer.equalsIgnoreCase("yes")) {
 
 		// Otherwise
 		else {
+			stopJeopardyTheme();
 			score=score-prizeMoney;
-			JOptionPane.showMessageDialog(null,"nope, it was yes, your score has been decreased by "+prizeMoney);
+			JOptionPane.showMessageDialog(null,"nope, it was "+correctAnswer+", your score has been decreased by "+prizeMoney);
 			updateScore();
 		}
 			// Decrement the score by the prizeMoney
@@ -166,7 +179,7 @@ if(answer.equalsIgnoreCase("yes")) {
 			// Pop up a message to tell the user they were wrong and give them the correct answer
 
 		// Call the updateScore() method
-		
+		updateScore();
 
 	}
 
