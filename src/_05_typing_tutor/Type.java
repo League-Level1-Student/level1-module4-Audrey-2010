@@ -10,7 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Type implements KeyListener {
-	JFrame frame = new JFrame();
+	JFrame frame = new JFrame(); 
 	JPanel panel = new JPanel();
 	JLabel label = new JLabel();
 	char currentLetter;
