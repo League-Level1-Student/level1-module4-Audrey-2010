@@ -18,7 +18,7 @@ public class Type implements KeyListener {
 	    Random r = new Random();
 	    return (char) (r.nextInt(26) + 'a');
 	}
-
+ 
 void setup() {
 	frame.setVisible(true);
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -27,7 +27,7 @@ void setup() {
 	label.setText(String.valueOf(currentLetter));
 	label.setFont(label.getFont().deriveFont(28.0f));
 	label.setHorizontalAlignment(JLabel.CENTER);
-	//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
+	//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
 	frame.addKeyListener(this);
 	panel.add(label);
 	frame.add(panel);
