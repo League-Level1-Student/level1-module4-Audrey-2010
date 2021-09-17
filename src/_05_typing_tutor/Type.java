@@ -14,7 +14,7 @@ public class Type implements KeyListener {
 	JPanel panel = new JPanel();
 	JLabel label = new JLabel();
 	char currentLetter;
-	char generateRandomLetter() {
+	char generateRandomLetter() { 
 	    Random r = new Random();
 	    return (char) (r.nextInt(26) + 'a');
 	}
