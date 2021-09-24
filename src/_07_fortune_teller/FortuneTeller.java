@@ -37,7 +37,25 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 
     }
 
-
+//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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
+    //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
 
     @Override
     public void mousePressed(MouseEvent e) {
