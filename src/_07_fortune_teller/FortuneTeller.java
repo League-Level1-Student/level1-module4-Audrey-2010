@@ -75,9 +75,9 @@ System.out.print(mouseY);
    		 // play("src/_07_fortune_teller/creepy-noise.wav");
    		 play("src/07_fortune_teller/trumpet.wav");
    		 // 9. Play the sound
-         
+         //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
    		 // 10. Insert your completed Magic 8 ball code here
-    		 int number;
+     		 int number;
    		Random boo = new Random();
    		
    		number = new Random().nextInt(4);

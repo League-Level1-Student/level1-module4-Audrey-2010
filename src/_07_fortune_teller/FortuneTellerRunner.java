@@ -12,7 +12,7 @@ public class FortuneTellerRunner {
       	 SwingUtilities.invokeLater(new FortuneTeller());
       	 begin();
        }
-    
+      
     static void begin() {
       	 // Welcome the user. Give them a hint for the secret location.
 JOptionPane.showMessageDialog(null,"hi user!");
