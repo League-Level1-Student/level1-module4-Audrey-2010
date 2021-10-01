@@ -77,7 +77,7 @@ System.out.print(mouseY);
    		 // 9. Play the sound
          
    		 // 10. Insert your completed Magic 8 ball code here
-   		 int number;
+    		 int number;
    		Random boo = new Random();
    		
    		number = new Random().nextInt(4);
