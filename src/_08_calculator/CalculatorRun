@@ -1,0 +1,10 @@
+package _08_calculator;
+
+import javax.swing.JPanel;
+
+public class CalculatorRun {
+public static void main(String[] args) {
+	new Calculator_thing().setup();
+	 
+}
+}
