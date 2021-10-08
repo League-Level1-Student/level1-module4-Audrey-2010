@@ -27,7 +27,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 
     int frameWidth = 310;
     int frameHeight = 163;
-//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
+//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
     //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
     //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
     //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
