@@ -11,7 +11,7 @@ public class PigLatinTranslator {
 private static boolean isLetter(char c) {
 return ( (c >= 'A' && c <= 'Z') || (c >='a' && c <= 'z') );
 }
-    
+      
 /**
 * Method to translate one word into pig latin.
 * @param word The word in english

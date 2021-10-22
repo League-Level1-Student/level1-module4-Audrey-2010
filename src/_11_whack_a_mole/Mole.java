@@ -28,7 +28,7 @@ public class Mole implements ActionListener {
 	frame.setTitle("ya like moles");
 
 }
-
+ 
 void drawButtons() {
 	
 	int whack = ran.nextInt(24);

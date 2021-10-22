@@ -19,7 +19,7 @@ public class Pig implements ActionListener {
 	JLabel notText = new JLabel();
 	PigLatinTranslator translator = new PigLatinTranslator();
 	
-void setup(){
+void setup(){ 
 
 	
 	frame.add(panel);
