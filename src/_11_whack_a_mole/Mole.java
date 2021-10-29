@@ -49,9 +49,21 @@ void drawButtons() {
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
+	
+	if(e.getSource() == mole) {
+		System.out.println("mole!");
+	}
+	
+	else {
+		System.out.println("not mole");
+	}
+	
 	frame.dispose();
 	frame=new JFrame();
 	panel=new JPanel();
 	setup();
+	
+	
+	
 }
 }
