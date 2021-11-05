@@ -4,4 +4,5 @@ public class SlotRunner {
 public static void main(String[] args) {
 	new Slot().setup();
 }
+
 }
