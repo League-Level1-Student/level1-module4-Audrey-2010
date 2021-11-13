@@ -65,7 +65,7 @@ void setup() {
 
 void changeIcons() {
 	randomMaker(label);
-	randomMaker(otherlabel);
+	randomMaker(otherlabel); 
 	randomMaker(alsolabel);
 	//  \(--)/
 	//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
