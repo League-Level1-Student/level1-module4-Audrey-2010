@@ -28,6 +28,12 @@ public class Slot implements ActionListener {
 	String two = "pixel2.png";
 	String three = "pixel3.png";
 	
+	int count = 0;
+	int count1 = 0;
+	int count2 = 0;
+	
+	int youwon = 0;
+	
 	Icon purple;
 	Icon cyan;
 	Icon yellow;
@@ -64,18 +70,22 @@ void changeIcons() {
 	//  \(--)/
 	//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
 	//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
+	//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   (8)
 }
 
 void randomMaker(JLabel x) {
 	int number = bop.nextInt(3);
 	if(number==0) {
 		x.setIcon(yellow);
+		count = count+1;
 	}
 	if(number==1) {
 		x.setIcon(cyan);
+		count = count+2;
 	}
 	if(number==2) {
 		x.setIcon(purple);
+		count = count+3;
 	}
 }
 
@@ -89,11 +99,24 @@ public Icon loadImageFromComputer(String fileName) {
 @Override
 public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
-	
-	if(label.equals(alsolabel) && label.equals(otherlabel) && alsolabel.equals(otherlabel)) {
-		JOptionPane.showMessageDialog(null, "you win :)");
-	}
+	if(count==3) {
+		JOptionPane.showMessageDialog(null, "you won! :)))");
+		youwon = youwon+1;
+		JOptionPane.showMessageDialog(null, "you won "+youwon+" times so far");
 		
+	}
+	if(count==6) {
+		JOptionPane.showMessageDialog(null, "you won! :)))");
+		youwon = youwon+1;
+		JOptionPane.showMessageDialog(null, "you won "+youwon+" times so far");
+		
+	}
+	if(count==9) {
+		JOptionPane.showMessageDialog(null, "you won! :)))");
+		youwon = youwon+1;
+		JOptionPane.showMessageDialog(null, "you won "+youwon+" times so far");
+		
+	}
 	
 	
 	changeIcons();
